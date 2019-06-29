@@ -1,0 +1,18 @@
+<a *ngIf="!loggedIn"  style="margin: 5px" class="button" routerLink="/signup">SignUp</a>
+<a *ngIf="!loggedIn"  style="margin: 5px" class="button" routerLink="/login">Login</a>
+<a *ngIf="!payment && loggedIn" style="margin: 5px" class="button" routerLink="/payment">Make payment</a>
+<button *ngIf="loggedIn"  style="margin: 5px" class="button is-black" (click)="logout()">Logout</button>
+
+<br><br>
+<a *ngIf="payment && loggedIn" [routerLink]="['/Paid']" style="margin: 5px"  class="button is-primary">Link1</a>
+<a *ngIf="payment && loggedIn" [routerLink]="['/Paid']" style="margin: 5px"  class="button is-link">Link2</a>
+<a *ngIf="payment && loggedIn" [routerLink]="['/Paid']" style="margin: 5px"  class="button is-info">Link3</a>
+<a *ngIf="payment && loggedIn" [routerLink]="['/Paid']" style="margin: 5px"  class="button is-success">Link4</a>
+<a *ngIf="payment && loggedIn" [routerLink]="['/Paid']" style="margin: 5px"  class="button is-warning">Link5</a>
+
+<a *ngIf="loggedIn && !payment" [routerLink]="['/notPaid'] "style="margin: 5px" class="button is-primary">Link1</a>
+<a *ngIf="loggedIn && !payment" [routerLink]="['/notPaid'] "style="margin: 5px"  class="button is-link">Link2</a>
+<a *ngIf="loggedIn && !payment" [routerLink]="['/notPaid'] "style="margin: 5px"  class="button is-info">Link3</a>
+<a *ngIf="loggedIn && !payment" [routerLink]="['/notPaid'] "style="margin: 5px"  class="button is-success">Link4</a>
+<a *ngIf="loggedIn && !payment" [routerLink]="['/notPaid'] "style="margin: 5px"  class="button is-warning">Link5</a>
+ 

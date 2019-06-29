@@ -1,0 +1,7 @@
+<form (submit)="addDetails()">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="name" required>
+  <input type="email" placeholder="Email" name="email" [(ngModel)]="email" required>
+  <input type="number" placeholder="Mobile No." name="contact_no" [(ngModel)]="contact_no" required>
+  <input type="password" placeholder="Password" name="password" [(ngModel)]="password" required>
+  <button type="submit">SignUp</button>
+  </form>

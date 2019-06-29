@@ -1,0 +1,22 @@
+
+
+  <div class="card" style="width: 50% ;margin:15% auto">
+      <header class="card-header">
+        <p class="card-header-title">
+          Make Payment
+        </p>
+      </header>
+      <div class="card-content">
+          <div class="content">
+          <form style="margin-top: 15%" novalidate (ngSubmit)="buy()" [formGroup]="stripeTest">
+              <input type="text" formControlName="name" placeholder="Jane Doe">
+              <input type="email" formControlName="email" placeholder="example@email.com">
+              <input type="number" formControlName="amount" placeholder="Amount ">
+              <ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-card>
+              <button type="submit">
+                BUY
+              </button>
+            </form>
+      </div>
+      </div>
+    </div>
